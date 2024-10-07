@@ -1,0 +1,6 @@
+FROM eclipse-temurin:21-jre-alpine
+RUN mkdir /app
+WORKDIR /app
+COPY destinychild-1.0-SNAPSHOT.jar /app
+COPY application.yaml /app
+CMD ["java", "-jar", "/app/destinychild-1.0-SNAPSHOT.jar"]

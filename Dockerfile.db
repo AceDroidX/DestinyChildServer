@@ -1,0 +1,4 @@
+FROM mysql:9
+COPY init.sql /docker-entrypoint-initdb.d/
+COPY destinychild.sql /docker-entrypoint-initdb.d/db/
+ENV MYSQL_ROOT_PASSWORD=123456

@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://db:3306/destinychild?useUnicode=true&characterEncoding=utf8
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:123456}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+season:
+  raid: ${season_raid:12} #/**raid赛季id 0-56*/
+  world: ${season_world:14} #世界boss1到38
+  level_max: ${season_level_max:1} #1获得物品角色自动满级 其他值不满级.
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
